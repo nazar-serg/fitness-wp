@@ -1,0 +1,61 @@
+body {
+    font-size: 16px;
+    line-height: 24px;
+    font-family: Helvetica, Arial, sans-serif;
+    color: $textColor;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+@media (max-width: 767px) {
+    body.lock {
+        overflow: hidden;
+    }
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.main {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex: 0 0 auto;
+}
+
+h2 {
+    font-size: 60px;
+    font-weight: 500;
+    padding-bottom: 20px;
+}
+
+a {
+    transition: all .2s ease-in-out;
+}
+
+.btn-transparent {
+    border: 1px solid #fff;
+    padding: 15px 20px;
+    letter-spacing: 3px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    transform: translate(0px, 0px);
+    display: inline-block;
+    &:hover {
+        transform: translate(0px, -2px);
+    }
+}
+
+.btn-green {}
