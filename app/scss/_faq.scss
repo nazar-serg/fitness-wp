@@ -1,0 +1,74 @@
+    .faq {
+        padding: 80px 0px;
+        &__row {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        &__column {
+            flex: 0 1 50%;
+        }
+        &__title {
+            margin-bottom: 20px;
+        }
+        &__text {
+            font-size: 16px;
+            line-height: calc(30 / 16 * 100%);
+            font-weight: 500;
+        }
+        &__accordion {
+            box-shadow: 50px 70px 120px -42px rgba(0, 0, 0, 0.3);
+            background-color: rgba(206, 206, 206, 0.4);
+            color: #000;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            transition: 0.4s;
+            text-transform: uppercase;
+            &:after {
+                content: '\002B';
+                color: #fff;
+                font-weight: bold;
+                float: right;
+                font-size: 16px;
+                width: 22px;
+                height: 22px;
+                border-radius: 50%;
+                background-color: $bgGreen;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                letter-spacing: normal;
+            }
+        }
+        &__active:after {
+            content: "\2212";
+        }
+        &__panel {
+            padding: 0px 18px;
+            background-color: white;
+            max-height: 0px;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            margin: 10px 0px;
+            font-size: 14px;
+            line-height: calc(28 / 14 * 100%);
+            font-weight: 500;
+        }
+        &__cart:not(:last-child) {
+            margin-bottom: 10px;
+        }
+        &__active,
+        &__accordion:hover {
+            background-color: #CECECE;
+        }
+        &__btn {
+            margin-top: 30px;
+        }
+    }

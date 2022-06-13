@@ -1,0 +1,56 @@
+.popular-programs {
+    padding: 80px 0;
+    position: relative;
+    &__title {
+        margin-bottom: 20px;
+        h2 {
+            text-align: center;
+        }
+    }
+    &__text {
+        text-align: center;
+        font-size: 16px;
+        line-height: calc(30 / 16 * 100%);
+        font-weight: 500;
+        margin-bottom: 40px;
+    }
+    &__btn {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    &__column {
+        float: left;
+        width: 33.333%;
+        padding: 40px 30px;
+        box-shadow: 50px 70px 120px -42px rgba(0, 0, 0, 0.3);
+    }
+    &__column-title {
+        font-size: 26px;
+        line-height: calc(30 / 26 * 100%);
+        text-transform: uppercase;
+        font-weight: 500;
+        margin-bottom: 15px;
+    }
+    &__column-text {
+        font-size: 16px;
+        line-height: calc(30 / 16 * 100%);
+        font-weight: 500;
+    }
+    &--bg-green {
+        background-color: $bgGreen;
+    }
+    &--bg-silver {
+        background-color: $bgSilver;
+        margin-top: 80px;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        width: 80%;
+        border-style: dashed;
+        border-color: #CFCFCF;
+        border-width: 1px;
+        top: 0;
+        left: 0;
+    }
+}

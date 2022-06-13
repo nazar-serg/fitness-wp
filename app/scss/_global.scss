@@ -40,8 +40,26 @@ h2 {
     padding-bottom: 20px;
 }
 
+h3 {
+    font-size: 34px;
+    font-weight: 500;
+    padding-bottom: 20px;
+}
+
 a {
     transition: all .2s ease-in-out;
+}
+
+.link-border-bottom {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: #000;
+    border-bottom: 2px solid $borderColor;
+    padding: 10px 12px;
+    &:hover {
+        box-shadow: 0px 8px 0px 0px $borderColor;
+    }
 }
 
 .btn-transparent {

@@ -18,6 +18,7 @@ function scripts_theme() {
     wp_deregister_script( 'jquery' );
 	wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js');
 	wp_enqueue_script( 'jquery' );
+	wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js', array('jquery') );
 	wp_enqueue_script( 'wow', get_template_directory_uri() . '/app/js/wow.min.js', array('jquery') );
     wp_enqueue_script( 'app', get_template_directory_uri() . '/app/js/app.min.js', array('jquery') );
 }
