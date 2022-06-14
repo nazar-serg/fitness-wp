@@ -26,13 +26,14 @@ function scripts_theme() {
 add_action( 'wp_footer', 'scripts_theme' );
 
 /*
-	Menu Registration
+	Menus Registration
 */
-function headerMenu() {
-    register_nav_menu( 'top', 'Header Menu' );
-}
-
-add_action( 'after_setup_theme', 'headerMenu' );
+register_nav_menus (
+	array (
+		'top' => 'Header Menu',
+		'bottom' => 'Footer Menu'
+	)
+);
 
 /*
     New trainer menu
