@@ -1,6 +1,10 @@
 .footer {
     background-color: #cfcfcf;
     padding: 40px 0px;
+    border-top: 2px solid $borderColor;
+    &__menu {
+        margin-bottom: 20px;
+    }
     &__list-menu {
         display: flex;
         justify-content: center;
@@ -12,5 +16,15 @@
     &__link-menu {
         color: #000;
         font-weight: 600;
+    }
+    &__copyright {
+        text-align: center;
+    }
+    &__copyright-link {
+        color: #000;
+        text-decoration: underline;
+        &:hover {
+            color: $textColorHover;
+        }
     }
 }

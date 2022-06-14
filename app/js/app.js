@@ -28,8 +28,9 @@ for (i = 0; i < acc.length; i++) {
     });
 }
 
-
-//modal
+/*
+    modal
+*/
 $('.modal-toggle').on('click', function(e) {
     e.preventDefault();
     $('.modal').toggleClass('is-visible');
@@ -45,7 +46,9 @@ $(document).ready(function() {
     });
 });
 
-//year footer
+/*
+    year footer
+*/
 let date = new Date().getFullYear();
 
 document.getElementById("year").innerHTML = date;

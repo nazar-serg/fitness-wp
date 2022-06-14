@@ -30,7 +30,7 @@ Template Name: Home
                         <?php the_field('banner_right_text'); ?>
                     </div>
                     <div class="banner__column-right-top-btn">
-                        <a class="banner__column-right-top-btn-link btn-transparent" href="<?php the_field('banner_right_btn_link'); ?>">
+                        <a class="banner__column-right-top-btn-link btn-transparent modal-toggle" href="<?php the_field('banner_right_btn_link'); ?>">
                             <?php the_field('banner_right_btn'); ?>
                         </a>
                     </div>
@@ -41,6 +41,7 @@ Template Name: Home
 </div>
 <?php
 while( have_posts() ): the_post();
+    get_template_part('parts/about', '', $post->ID);
     get_template_part('parts/trainer', '', $post->ID);
     get_template_part('parts/program', '', $post->ID);
 endwhile;   

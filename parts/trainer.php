@@ -9,7 +9,7 @@
             <?php foreach($trainer_list as $trainer_id): ?>
                 <div class="trainer__wrapper">
                     <div class="trainer__img">
-                        <img src="<?php echo get_the_post_thumbnail_url($trainer_id, 'medium'); ?>" alt="">
+                        <img src="<?php echo get_the_post_thumbnail_url($trainer_id, 'large'); ?>" alt="">
                     </div>
                     <div class="trainer__content wow animate__fadeInRight">
                         <div class="trainer__content-name">
@@ -38,7 +38,7 @@
                             </div>
                         </div>
                         <div class="trainer__content-btn">
-                            <a class="trainer__content-btn-link link-border-bottom" href="#">
+                            <a class="trainer__content-btn-link link-border-bottom modal-toggle" href="">
                                 Отримати програму
                             </a>
                         </div>

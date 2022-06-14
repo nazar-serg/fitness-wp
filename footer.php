@@ -13,12 +13,28 @@
                 ?>
             </nav>
             <div class="footer__copyright">
-                <p>© 2022 Eleat Sports Nutrition® | Design by Web Guild</p>
+                <p>© <span id="year"></span> Фітнес та здорове харчування | Design by <a class="footer__copyright-link" href="https://web-guild.pro/" target="_blank">Web Guild</a></p>
             </div>
         </div>
     </div>
 </footer>
 </div>
+<div class="modal">
+    <div class="modal-overlay modal-toggle"></div>
+    <div class="modal-wrapper modal-transition">
+      <div class="modal-header">
+        <button class="modal-close modal-toggle"><i class='bx bx-x'></i></button>
+        <div class="modal-heading">Отримати програму<br> від тренера</div>
+      </div>
+      <div class="modal-body">
+        <div class="modal-content">
+          <div class="modal-form">
+            <?php echo do_shortcode('[contact-form-7 id="165" title="Contact Form Modal"]'); ?>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 <?php wp_footer(); ?>
 </body>
 
