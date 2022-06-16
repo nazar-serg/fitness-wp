@@ -1,0 +1,44 @@
+.content-area {
+    padding: 80px 0;
+    &__row {
+        display: flex;
+        gap: 40px;
+    }
+    &__column-left {
+        flex: 0 1 25%;
+    }
+    &__column-right {
+        flex: 0 1 75%;
+    }
+    &__sidebar {
+        box-shadow: 50px 70px 120px -42px rgba(0, 0, 0, 0.3);
+        padding: 15px 8px;
+    }
+    &__widget-wrapper {
+        h3 {
+            font-size: 23px!important;
+            color: #000;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        li {
+            margin-bottom: 10px;
+            margin-left: -10px;
+            a {
+                border-left: 4px solid transparent;
+                padding: 4px 4px 4px 10px;
+                color: #000;
+                font-size: 17px;
+                &:hover {
+                    border-left: 4px solid $borderColor;
+                }
+            }
+        }
+    }
+    &__column-right-row {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-column-gap: 60px;
+        grid-row-gap: 65px;
+    }
+}
