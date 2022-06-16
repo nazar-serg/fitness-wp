@@ -111,3 +111,38 @@ function add_additional_class_on_li($classes, $item, $args) {
     return $classes;
 }
 add_filter('nav_menu_css_class', 'add_additional_class_on_li', 1, 3);
+
+/*
+	Registering sidebars
+*/
+add_action( 'widgets_init', 'asidewp_sidebars' );
+function asidewp_sidebars() {
+	register_sidebar(
+		array(
+			'name' => 'Blog Sidebar',
+			'id' => 'sidebar-1',
+			'description' => 'Це бічна панель блогу. Ви можете додати свої віджети тут. ',
+			'before_widget' => '<div class="content-area__widget-wrapper">',
+			'after_widget' => '</div>',
+			'before_title' => '<div class="content-area__widget-title">',
+			'after_title' => '</div>'
+		)
+	);	
+}
+
+
+/*
+	Read More
+*/
+function wpdocs_excerpt_more( $more ) {
+    return '<a class="blog-article__read-more link-border-bottom" href="'.get_the_permalink().'" rel="nofollow">Докладніше</a>';
+}
+add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
+
+/*
+	Post preview length classes
+*/
+function wpdocs_custom_excerpt_length( $length ) {
+    return 20;
+}
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
