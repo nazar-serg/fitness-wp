@@ -11,6 +11,14 @@ wow = new WOW({
 wow.init();
 
 /*
+    fixed sidebar block blog page
+*/
+$('.content-area__sidebar').stickit({
+    top: 50,
+    screenMinWidth: 768
+});
+
+/*
     accordion
 */
 var acc = document.getElementsByClassName("faq__accordion");

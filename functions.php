@@ -20,6 +20,7 @@ function scripts_theme() {
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js', array('jquery') );
 	wp_enqueue_script( 'wow', get_template_directory_uri() . '/app/js/wow.min.js', array('jquery') );
+	wp_enqueue_script( 'stickit', get_template_directory_uri() . '/app/js/jquery.stickit.min.js', array('jquery') );
     wp_enqueue_script( 'app', get_template_directory_uri() . '/app/js/app.min.js', array('jquery') );
 }
 

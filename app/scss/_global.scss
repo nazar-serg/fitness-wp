@@ -97,4 +97,51 @@ a {
     }
 }
 
-.btn-green {}
+.btn-green {
+    border: 1px solid $borderColor;
+    padding: 15px 20px;
+    letter-spacing: 3px;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 600;
+    transform: translate(0px, 0px);
+    display: inline-block;
+    &:hover {
+        transform: translate(0px, -2px);
+    }
+}
+
+.banner-page {
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 400px;
+    background-size: cover;
+    padding: 60px 0px 0px;
+    &__content {
+        position: relative;
+        padding: 60px 0px 0px;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 60%;
+            border-style: dashed;
+            border-color: #CFCFCF;
+            border-width: 1px;
+            top: 0;
+            left: 0;
+        }
+    }
+    &__sub-title {
+        text-transform: uppercase;
+        letter-spacing: 12px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: calc(24 / 16 * 100%);
+        padding-bottom: 20px;
+        color: #fff;
+    }
+    &__title {
+        color: #fff;
+    }
+}

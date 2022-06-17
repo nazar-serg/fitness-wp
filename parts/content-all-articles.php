@@ -1,7 +1,7 @@
 <article class="blog-article wow animate__fadeInUp">
 	<div class="blog-article__img">
 		<a href="<?php the_permalink(); ?>">
-			<?php the_post_thumbnail( array( 500, 300 ) ); ?>
+			<?php the_post_thumbnail( array( 500, 250 ) ); ?>
 		</a>
 	</div>
 	<div class="blog-article__title">

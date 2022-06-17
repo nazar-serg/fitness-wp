@@ -48,3 +48,84 @@
         left: 0;
     }
 }
+
+.about-us-page {
+    &__banner {
+        background-image: radial-gradient(circle at center, rgba(42, 46, 64, 0) 0%, #2a2e40 70%), url(../img/banner-about.jpg)!important;
+    }
+    &__popular-programs {
+        position: relative;
+        padding: 80px 0;
+        margin-left: 80px;
+    }
+    &__popular-programs-top {
+        background-color: $bgGreen;
+    }
+    &__popular-programs-top-wrapper {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+    }
+    &__popular-programs-top-title {
+        font-size: 26px;
+        line-height: calc(42 / 26 * 100%);
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        padding: 60px 40px;
+        font-weight: 500;
+    }
+    &__popular-programs-top-text {
+        padding: 60px 40px 0px 0px;
+        font-size: 16px;
+        line-height: calc(30 / 16 * 100%);
+        font-weight: 500;
+    }
+    &__popular-programs-top-img {
+        max-width: 100%;
+        margin-top: -60px;
+        img {
+            max-width: 400px;
+            height: 350px;
+            object-fit: cover;
+        }
+    }
+    &__popular-programs-bottom-wrapper {
+        display: flex;
+        justify-content: flex-end;
+        gap: 20px;
+    }
+    &__popular-programs-bottom-img {
+        min-width: 100%;
+        img {
+            max-width: 400px;
+            height: 350px;
+            object-fit: cover;
+            box-shadow: 50px 70px 120px -42px rgba(0, 0, 0, 0.3);
+        }
+    }
+    &__popular-programs-bottom-column {
+        flex: 0 1 20%;
+    }
+    &__popular-programs-bottom-list-programs-title {
+        font-size: 23px;
+        color: #000;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding: 25px 0px 40px 20px;
+    }
+    &__popular-programs-bottom-list-programs-name {
+        margin-bottom: 10px;
+        a {
+            border-left: 4px solid transparent;
+            padding: 4px 4px 4px 20px;
+            color: #000;
+            font-size: 17px;
+            &:hover {
+                border-left: 4px solid #9fc418;
+            }
+        }
+    }
+    &__popular-programs-bottom-btn {
+        margin-top: 25px;
+    }
+}
