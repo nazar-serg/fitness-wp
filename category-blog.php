@@ -4,14 +4,14 @@ Template Name: Blog
 */
 ?>
 <?php get_header(); ?>
-<div class="blog-banner">
-    <div class="blog-banner__content">
+<div class="blog-banner banner-page">
+    <div class="blog-banner__content banner-page__content">
         <div class="container">
-            <div class="blog-banner__text wow animate__fadeInUp" data-wow-delay=".5s">
-                <div class="blog-banner__sub-title">
+            <div class="blog-banner__text banner-page__text wow animate__fadeInUp" data-wow-delay=".5s">
+                <div class="blog-banner__sub-title banner-page__sub-title">
                     Корисні статті
                 </div>
-                <div class="blog-banner__title">
+                <div class="blog-banner__title banner-page__title">
                     <h1>Блог</h1>
                 </div>
             </div>
@@ -27,6 +27,9 @@ Template Name: Blog
                 </aside>
             </div>
             <div class="content-area__column-right">
+                <div class="content-area__column-right-search">
+                    <?php get_search_form(); ?>
+                </div>
                 <div class="content-area__column-right-row">
                     <?php 
 

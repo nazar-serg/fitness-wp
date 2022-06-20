@@ -14,7 +14,7 @@ wow.init();
     fixed sidebar block blog page
 */
 $('.content-area__sidebar').stickit({
-    top: 50,
+    top: 120,
     screenMinWidth: 768
 });
 
@@ -60,3 +60,17 @@ $(document).ready(function() {
 let date = new Date().getFullYear();
 
 document.getElementById("year").innerHTML = date;
+
+/*
+    menu fixed
+*/
+window.onscroll = () => {
+    const menu = document.querySelector('.header');
+    const Y = window.scrollY;
+
+    if (Y > 300) {
+        menu.classList.add('menu-fixed');
+    } else if (Y < 100) {
+        menu.classList.remove('menu-fixed');
+    }
+}

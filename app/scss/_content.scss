@@ -22,6 +22,20 @@
             text-transform: uppercase;
             letter-spacing: 1px;
         }
+        ul {
+            margin-bottom: 40px;
+        }
+        p {
+            a {
+                display: inline-block;
+                color: #000;
+                padding: 0px 2px;
+                ;
+                &:hover {
+                    box-shadow: 0px 4px 0px 0px $borderColor;
+                }
+            }
+        }
         li {
             margin-bottom: 10px;
             margin-left: -10px;
@@ -41,5 +55,8 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
         grid-column-gap: 60px;
         grid-row-gap: 65px;
+    }
+    &__column-right-search {
+        margin-bottom: 60px;
     }
 }
