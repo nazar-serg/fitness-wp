@@ -136,7 +136,7 @@ function asidewp_sidebars() {
 	Read More
 */
 function wpdocs_excerpt_more( $more ) {
-    return '<a class="blog-article__read-more link-border-bottom" href="'.get_the_permalink().'" rel="nofollow">Докладніше</a>';
+    return '<br><a class="blog-article__read-more link-border-bottom" href="'.get_the_permalink().'" rel="nofollow">Докладніше</a>';
 }
 add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
 
@@ -147,3 +147,5 @@ function wpdocs_custom_excerpt_length( $length ) {
     return 20;
 }
 add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+
+

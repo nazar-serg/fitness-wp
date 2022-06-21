@@ -1,4 +1,4 @@
-<div class="search">
+<div class="search__search-form">
 	<form role="search" method="get" class="search__form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 		<label>
 			<input type="search" class="search__field" placeholder="<?php echo esc_attr_x( 'Пошук &hellip;', 'placeholder', 'twentysixteen' ); ?>" value="<?php echo get_search_query(); ?>" name="s" />

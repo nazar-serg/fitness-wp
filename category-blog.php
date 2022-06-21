@@ -40,6 +40,14 @@ Template Name: Blog
                             get_template_part( 'parts/content', 'all-articles' );
 
                         endwhile;
+                        ?>
+                        </div>
+                        <div class="content-area__pagination">
+                            <?php previous_posts_link("<< Новіші пости"); ?>
+                            <?php next_posts_link("Інші пости >>"); ?>
+                        </div>
+                        
+                        <?php
                     else: 
                     ?>
 
@@ -47,7 +55,6 @@ Template Name: Blog
 
                     <?php endif; ?>
                 </div>
-            </div>
        </div>
     </div>
 </div>
