@@ -1,30 +1,22 @@
 <?php
 
 /*
-	Adding Styles
+	Adding Styles and Scripts
 */
 function style_theme() {
 	wp_dequeue_style( 'wp-block-library' );
 	wp_enqueue_style( 'animate', get_template_directory_uri() . '/app/css/animate.min.css' );
     wp_enqueue_style( 'style', get_template_directory_uri() . '/app/css/app.min.css' );
+	wp_deregister_script( 'jquery' );
+	wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js');
+	wp_enqueue_script( 'jquery' );
+	wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js', array() );
+	wp_enqueue_script( 'wow', get_template_directory_uri() . '/app/js/wow.min.js', array() );
+	wp_enqueue_script( 'stickit', get_template_directory_uri() . '/app/js/jquery.stickit.min.js', array() );
+	wp_enqueue_script( 'app', get_template_directory_uri() . '/app/js/app.min.js', array(), '1.0.0', true );
 }
 
 add_action( 'wp_enqueue_scripts', 'style_theme' );
-
-/*
-	Adding scripts
-*/
-function scripts_theme() {
-    wp_deregister_script( 'jquery' );
-	wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js');
-	wp_enqueue_script( 'jquery' );
-	wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js', array('jquery') );
-	wp_enqueue_script( 'wow', get_template_directory_uri() . '/app/js/wow.min.js', array('jquery') );
-	wp_enqueue_script( 'stickit', get_template_directory_uri() . '/app/js/jquery.stickit.min.js', array('jquery') );
-    wp_enqueue_script( 'app', get_template_directory_uri() . '/app/js/app.min.js', array('jquery') );
-}
-
-add_action( 'wp_footer', 'scripts_theme' );
 
 /*
 	Menus Registration

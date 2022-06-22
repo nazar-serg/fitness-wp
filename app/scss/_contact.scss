@@ -5,7 +5,6 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    margin-top: 80px;
     &__wrapper {
         position: relative;
         padding: 120px 0px;
@@ -52,6 +51,9 @@
                 box-shadow: 0 8px 0 0 #9fc418;
             }
         }
+        >div {
+            color: #fff;
+        }
     }
     &__title {
         font-size: 60px;
@@ -74,5 +76,75 @@
         letter-spacing: 2px;
         color: rgba(255, 255, 255, 0.27);
         filter: blur(5px);
+        @media(max-width: 767px) {
+            font-size: 80px;
+        }
+    }
+}
+
+.contact-page {
+    &__banner {
+        background-image: radial-gradient(circle at center, rgba(42, 46, 64, 0) 0%, #2a2e40 70%), url(../img/contact-banner.jpeg)!important;
+    }
+    &__contact {
+        padding: 80px 0px;
+    }
+    &__form {
+        max-width: 800px;
+        margin: auto;
+        input[type=text],
+        input[type=email] {
+            height: 50px;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+        input[type=text],
+        input[type=email],
+        textarea {
+            width: 100%;
+            background-color: transparent;
+            border: none;
+            outline: 0;
+            color: initial;
+            border-bottom: 1px solid rgba(12, 12, 12, 0.3);
+            padding: 12px 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            &::placeholder {
+                color: inherit;
+            }
+        }
+        input[type=submit] {
+            border: 1px solid $borderColor;
+            padding: 15px 20px;
+            letter-spacing: 3px;
+            color: #000;
+            text-transform: uppercase;
+            font-weight: 600;
+            transform: translate(0px, 0px);
+            display: inline-block;
+            cursor: pointer;
+            transition: all .2s ease-in-out;
+            background-color: transparent;
+            margin-top: 15px;
+            &:hover {
+                transform: translate(0px, -2px);
+            }
+        }
+        >div {
+            color: initial;
+        }
+    }
+    &__form-title {
+        font-size: 60px;
+        line-height: calc(60 / 60 * 100%);
+        font-weight: 400;
+        padding-bottom: 40px;
+        color: initial;
+        text-align: center;
+        letter-spacing: 2px;
+        @media (max-width: 767px) {
+            font-size: 40px;
+        }
     }
 }

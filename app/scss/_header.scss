@@ -149,9 +149,11 @@
 
 .menu-fixed .header__body {
     height: 100px;
+    transition: all 0.8s ease;
 }
 
 .menu-fixed img {
     object-fit: contain;
+    transition: all 0.8s ease;
     width: 90px;
 }

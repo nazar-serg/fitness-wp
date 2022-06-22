@@ -127,7 +127,7 @@ Template Name: About Us Page
         </div>
     </section>
 
-    <section>
+    <section class="about-us-page__contact-form">
         <?php
         get_template_part( 'parts/content', 'contact');
         ?>
