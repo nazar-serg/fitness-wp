@@ -20,11 +20,13 @@
                     }
                     ?>
                 </div>
+                <?php if( is_page( '6' ) ): ?>
                 <div class="about__btn">
                     <a class="about__btn-link link-border-bottom" href="<?php the_field('about_link', $post_id); ?>">
                         <?php the_field('about_btn', $post_id); ?>
                     </a>
                 </div>
+                <?php endif; ?>
             </div>
         </div>
     </div>

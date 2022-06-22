@@ -73,4 +73,11 @@
             font-weight: 600;
         }
     }
+    &__comment-title {
+        font-size: 60px;
+        line-height: calc(60 / 60 * 100%);
+        font-weight: 500;
+        padding-bottom: 20px;
+        text-align: center;
+    }
 }

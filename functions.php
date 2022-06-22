@@ -148,4 +148,11 @@ function wpdocs_custom_excerpt_length( $length ) {
 }
 add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 
+/* 
+	add title
+*/
+add_theme_support( 'title-tag' );
+
+
+
 

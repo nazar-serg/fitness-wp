@@ -126,5 +126,11 @@ Template Name: About Us Page
             </div>
         </div>
     </section>
+
+    <section>
+        <?php
+        get_template_part( 'parts/content', 'contact');
+        ?>
+    </section>
 </section>
 <?php get_footer(); ?>

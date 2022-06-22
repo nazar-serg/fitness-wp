@@ -1,0 +1,78 @@
+.contact-form-page {
+    background-image: radial-gradient(circle at center, rgba(42, 46, 64, 0) 0, #2a2e40 70%), url(../img/banner-contact.jpg)!important;
+    width: 100%;
+    min-height: 600px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 80px;
+    &__wrapper {
+        position: relative;
+        padding: 120px 0px;
+    }
+    &__form {
+        max-width: 800px;
+        margin: auto;
+        input[type=text],
+        input[type=email] {
+            height: 50px;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+        input[type=text],
+        input[type=email],
+        textarea {
+            width: 100%;
+            background-color: transparent;
+            border: none;
+            outline: 0;
+            color: #fff;
+            border-bottom: 1px solid rgba(255, 255, 255, .8);
+            padding: 12px 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            &::placeholder {
+                color: #fff;
+            }
+        }
+        input[type=submit] {
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            color: #fff;
+            border: none;
+            outline: 0;
+            cursor: pointer;
+            border-bottom: 2px solid #9fc418;
+            padding: 10px 12px;
+            background-color: transparent;
+            transition: all .2s ease-in-out;
+            margin-top: 15px;
+            &:hover {
+                box-shadow: 0 8px 0 0 #9fc418;
+            }
+        }
+    }
+    &__title {
+        font-size: 60px;
+        line-height: calc(60 / 60 * 100%);
+        font-weight: 400;
+        padding-bottom: 40px;
+        color: #fff;
+        text-align: center;
+        letter-spacing: 2px;
+        @media (max-width: 767px) {
+            font-size: 40px;
+        }
+    }
+    &__back-title {
+        position: absolute;
+        top: 0;
+        right: 20px;
+        font-size: 180px;
+        line-height: calc(180 / 180 * 100%);
+        letter-spacing: 2px;
+        color: rgba(255, 255, 255, 0.27);
+        filter: blur(5px);
+    }
+}

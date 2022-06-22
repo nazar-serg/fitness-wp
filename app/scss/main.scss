@@ -1,7 +1,6 @@
 //Styles
 @import "reset",
 "libs",
-"mixins",
 "vars",
 "header",
 "global",
@@ -14,7 +13,8 @@
 "modal",
 "blog",
 "content",
-"search";
+"search",
+"contact";
 //Variables
 $maxWidth: 1920;
 $maxWidthContainer: 1080;

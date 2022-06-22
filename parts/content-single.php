@@ -19,6 +19,7 @@
                         <?php previous_post_link( '%link &raquo;' ); ?>
                     </div>
 		        </div>
+                <div class="post-blog__comment-title">Залишіть ваш коментар будь ласка</div>
             <?php
             if( comments_open() || get_comments_number() ):
                 
