@@ -149,3 +149,39 @@ a {
 .wpd-vote {
     display: none!important;
 }
+
+#to-up {
+    display: inline-block;
+    background-color: $bgGreen;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s, opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+
+#to-up:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+#to-up:active {
+    opacity: 0.8;
+}
+
+#to-up.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#to-up i {
+    font-size: 34px;
+    color: #fff;
+    line-height: 48px;
+}

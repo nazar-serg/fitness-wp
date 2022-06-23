@@ -147,4 +147,44 @@
             font-size: 40px;
         }
     }
+    &__our-contacts {
+        padding: 80px 0px;
+        @media(max-width: 767px) {
+            padding: 40px 0px;
+        }
+    }
+    &__our-contacts-wrapper {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        @media(max-width: 767px) {
+            display: block;
+        }
+    }
+    &__our-contacts-column {
+        flex: 0 1 33.333%;
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        text-align: center;
+        padding: 40px 20px;
+        box-shadow: 50px 70px 120px -42px rgba(0, 0, 0, 0.3);
+        letter-spacing: 1px;
+        color: #000;
+        img {
+            width: 24px;
+            height: 24px;
+            object-fit: cover;
+            margin-right: 4px;
+        }
+        &--bg-green {
+            background-color: $bgGreen;
+        }
+        &--bg-silver {
+            background-color: $bgSilver;
+        }
+        @media(max-width: 767px) {
+            margin-bottom: 20px;
+        }
+    }
 }

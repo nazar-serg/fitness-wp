@@ -10,7 +10,8 @@
 
 <body>
 <div class="wrapper">
-    <header id="header" class="header">
+    <a id="to-up"><i class='bx bxs-chevrons-up'></i></a>
+    <header class="header">
         <div class="container">
             <div class="header__body">
                 <div class="header__logo">

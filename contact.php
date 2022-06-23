@@ -24,10 +24,32 @@ Template Name: Contact Page
     <section class="contact-page__our-contacts">
         <div class="container">
             <div class="contact-page__our-contacts-wrapper">
-                <div class="contact-page__our-contacts-email">test@gmail.com</div>
+                <div class="contact-page__our-contacts-column contact-page__our-contacts-column--bg-green">
+                <?php
+                $our_contact_1 = get_field( 'contact_our_contact_1' );
+                if( $our_contact_1 ): ?>
+                    <img src="<?php echo $our_contact_1['img']; ?>">
+                    <?php echo $our_contact_1['text']; ?>
+                <?php endif; ?>
+                </div>
+                <div class="contact-page__our-contacts-column contact-page__our-contacts-column--bg-silver">
+                <?php
+                $our_contact_2 = get_field( 'contact_our_contact_2' );
+                if( $our_contact_2 ): ?>
+                    <img src="<?php echo $our_contact_2['img']; ?>">
+                    <?php echo $our_contact_2['text']; ?>
+                <?php endif; ?>
+                </div>
+                <div class="contact-page__our-contacts-column">
+                <?php
+                $our_contact_3 = get_field( 'contact_our_contact_3' );
+                if( $our_contact_3 ): ?>
+                    <img src="<?php echo $our_contact_3['img']; ?>">
+                    <?php echo $our_contact_3['text']; ?>
+                <?php endif; ?>
+                </div>
             </div>
         </div>
-       
     </section>
     <section class="contact-page__contact">
         <div class="container">
