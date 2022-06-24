@@ -13,6 +13,7 @@ function style_theme() {
 	wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js', array() );
 	wp_enqueue_script( 'wow', get_template_directory_uri() . '/app/js/wow.min.js', array() );
 	wp_enqueue_script( 'stickit', get_template_directory_uri() . '/app/js/jquery.stickit.min.js', array() );
+	wp_enqueue_script( 'swiper', get_template_directory_uri() . '/node_modules/swiper/swiper-bundle.min.js', array() );
 	wp_enqueue_script( 'app', get_template_directory_uri() . '/app/js/app.min.js', array(), '1.0.0', true );
 }
 
@@ -112,7 +113,7 @@ function asidewp_sidebars() {
 			'before_title' => '<div class="content-area__widget-title">',
 			'after_title' => '</div>'
 		)
-	);	
+	);		
 }
 
 

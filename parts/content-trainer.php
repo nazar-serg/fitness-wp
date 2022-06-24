@@ -38,7 +38,7 @@
                             </div>
                         </div>
                         <div class="trainer__content-btn">
-                            <a class="trainer__content-btn-link link-border-bottom modal-toggle" href="">
+                            <a class="trainer__content-btn-link link-border-bottom modal-toggle" href="test.ua">
                                 Отримати програму
                             </a>
                         </div>

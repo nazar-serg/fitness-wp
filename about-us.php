@@ -70,43 +70,27 @@ Template Name: About Us Page
                         <div class="about-us-page__popular-programs-bottom-list-programs-title">
                             <?php the_field( 'popular_programs_list_all_title' ); ?>
                         </div>
+                        <?php
+                        $this_category = get_category($cat='14');
+                        $parent_term_id =$this_category->cat_ID;
 
-                        <?php
-                        $popular_program_1 = get_field( 'popular_programs_item_1' );
-                        if($popular_program_1): ?>
-                        <div class="about-us-page__popular-programs-bottom-list-programs-name">
-                            <a href="#"><?php echo $popular_program_1['title']; ?></a>
-                        </div>
-                        <?php endif; ?>
-                        <?php
-                        $popular_program_2 = get_field( 'popular_programs_item_2' );
-                        if($popular_program_1): ?>
-                        <div class="about-us-page__popular-programs-bottom-list-programs-name">
-                            <a href="#"><?php echo $popular_program_2['title']; ?></a>
-                        </div>
-                        <?php endif; ?>
-                        <?php
-                        $popular_program_3 = get_field( 'popular_programs_item_3' );
-                        if($popular_program_3): ?>
-                        <div class="about-us-page__popular-programs-bottom-list-programs-name">
-                            <a href="#"><?php echo $popular_program_3['title']; ?></a>
-                        </div>
-                        <?php endif; ?>
-                        <?php
-                        $popular_program_4 = get_field( 'popular_programs_item_4' );
-                        if($popular_program_4): ?>
-                        <div class="about-us-page__popular-programs-bottom-list-programs-name">
-                            <a href="#"><?php echo $popular_program_4['title']; ?></a>
-                        </div>
-                        <?php endif; ?>
-                        <?php
-                        $popular_program_5 = get_field( 'popular_programs_item_5' );
-                        if($popular_program_3): ?>
-                        <div class="about-us-page__popular-programs-bottom-list-programs-name">
-                            <a href="#"><?php echo $popular_program_5['title']; ?></a>
-                        </div>
-                        <?php endif; ?>
+                        $taxonomies = array( 
+                        'taxonomy' => 'category'
+                        );
 
+                        $args = array(
+                        'child_of' => $parent_term_id
+                        ); 
+
+                        $terms = get_terms($taxonomies, $args);
+                        if (sizeof($terms)>0) {
+                            foreach ( $terms as $term ) {
+                            echo '<div class="about-us-page__popular-programs-bottom-list-programs-name">';
+                            echo '<a href="' . esc_url( get_category_link( $term->term_id ) ) . '">'.$term->name;
+                            echo '</div>';
+                            }
+                        }
+                        ?> 
                     </div>
                 </div>
                 <div class="about-us-page__popular-programs-bottom-column">

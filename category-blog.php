@@ -23,7 +23,31 @@ Template Name: Blog
        <div class="content-area__row">
         <div class="content-area__column-left">
                 <aside class="content-area__sidebar">
-                    <?php get_sidebar( 'blog' ); ?>
+                <?php
+                $this_category = get_category($cat='3');
+                $parent_term_id =$this_category->cat_ID;
+
+                $taxonomies = array( 
+                    'taxonomy' => 'category'
+                );
+
+                $args = array(
+                    'child_of' => $parent_term_id
+                ); 
+
+                $terms = get_terms($taxonomies, $args);
+                    echo '<div class="content-area__widget-wrapper">';
+                    echo '<ul>';
+                    if (sizeof($terms)>0) {
+                        foreach ( $terms as $term ) {
+                            echo '<li>';
+                            echo '<a href="' . esc_url( get_category_link( $term->term_id ) ) . '">'.$term->name;
+                            echo '</li>';
+                            }
+                        }
+                    echo '</ul>';
+                    echo '</div>';
+                ?> 
                 </aside>
             </div>
             <div class="content-area__column-right">
@@ -32,10 +56,10 @@ Template Name: Blog
                 </div>
                 <div class="content-area__column-right-row">
                     <?php 
+                    $query = new WP_Query( 'cat=3' );
+                    if( $query->have_posts() ):
 
-                    if( have_posts() ):
-
-                        while( have_posts() ): the_post();
+                        while( $query->have_posts() ): $query->the_post();
 
                             get_template_part( 'parts/content', 'all-articles' );
 

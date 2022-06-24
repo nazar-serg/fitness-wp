@@ -27,30 +27,27 @@ btn.on('click', function(e) {
 });
 
 /*
+    menu fixed
+*/
+$(window).scroll(function() {
+    if ($(window).scrollTop() >= 300) {
+        $('header').addClass('fixed-header');
+    } else {
+        $('header').removeClass('fixed-header');
+    }
+});
+
+/*
     wow js
 */
 wow = new WOW({
     boxClass: 'wow',
     animateClass: 'animate__animated',
     offset: 0,
-    mobile: true,
+    mobile: false,
     live: true
 })
 wow.init();
-
-/*
-    menu fixed
-*/
-window.onscroll = () => {
-    const menu = document.querySelector('.header');
-    const Y = window.scrollY;
-
-    if (Y > 300) {
-        menu.classList.add('menu-fixed');
-    } else if (Y < 100) {
-        menu.classList.remove('menu-fixed');
-    }
-}
 
 /*
     fixed sidebar block blog page

@@ -26,27 +26,25 @@
             letter-spacing: 1px;
         }
         ul {
-            margin-bottom: 40px;
+            padding: 0;
         }
-        p {
-            a {
-                display: inline-block;
-                color: #000;
-                padding: 0px 2px;
-                font-size: 18px!important;
-                &:hover {
-                    box-shadow: 0px 4px 0px 0px $borderColor;
-                }
-            }
-        }
+        // a {
+        //     display: inline-block;
+        //     color: #000;
+        //     padding: 0px 2px;
+        //     font-size: 18px!important;
+        //     &:hover {
+        //         box-shadow: 0px 4px 0px 0px $borderColor;
+        //     }
+        // }
         li {
+            list-style: none;
             margin-bottom: 10px;
-            margin-left: -10px;
             a {
-                border-left: 4px solid transparent;
                 padding: 4px 4px 4px 10px;
                 color: #000;
                 font-size: 17px;
+                border-left: 4px solid transparent;
                 &:hover {
                     border-left: 4px solid $borderColor;
                 }
