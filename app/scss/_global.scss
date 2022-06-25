@@ -59,6 +59,7 @@ h2 {
 
 h3 {
     font-size: 34px;
+    line-height: calc(34 / 34 * 100%);
     font-weight: 500;
     padding-bottom: 20px;
     @media (max-width: 767px) {

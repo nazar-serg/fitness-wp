@@ -17,33 +17,42 @@
 <div class="content-area">
     <div class="container">
        <div class="content-area__row">
-        <div class="content-area__column-left">
+            <div class="content-area__column-left">
                 <aside class="content-area__sidebar">
-                <?php
-                $this_category = get_category($cat='3');
-                $parent_term_id =$this_category->cat_ID;
+                        <?php
+                        $this_category = get_category($cat='3');
 
-                $taxonomies = array( 
-                    'taxonomy' => 'category'
-                );
+                        $parent_term_id =$this_category->cat_ID;
 
-                $args = array(
-                    'child_of' => $parent_term_id
-                ); 
+                        $taxonomies = array( 
+                            'taxonomy' => 'category'
+                        );
 
-                $terms = get_terms($taxonomies, $args);
-                    echo '<div class="content-area__widget-wrapper">';
-                    echo '<ul>';
-                    if (sizeof($terms)>0) {
-                        foreach ( $terms as $term ) {
-                            echo '<li>';
-                            echo '<a href="' . esc_url( get_category_link( $term->term_id ) ) . '">'.$term->name;
-                            echo '</li>';
-                            }
-                        }
-                    echo '</ul>';
-                    echo '</div>';
-                ?> 
+                        $args = array(
+                            'child_of' => $parent_term_id
+                        ); 
+
+                        $terms = get_terms($taxonomies, $args);
+                            echo '<div class="content-area__widget-wrapper">';
+                            echo '<h3>Категорії</h3>';
+                            echo '<ul>';
+                            if (sizeof($terms)>0) {
+                                foreach ( $terms as $term ) {
+                                    echo '<li><a href="' . esc_url( get_category_link( $term->term_id ) ) . '">' . $term->name . '</a></li>';
+                                }
+                                }
+                            echo '</ul>';
+                            echo '</div>';
+                        ?>
+                        
+                        <?php 
+
+                        echo '<div class="content-area__widget-wrapper">';
+                        echo '<h3>Позначка</h3>';
+                        the_tags( '<ul><li>','</li><li>','</li></ul>' ); 
+                        echo '</div>';
+                        
+                        ?>
                 </aside>
             </div>
             <div class="content-area__column-right">

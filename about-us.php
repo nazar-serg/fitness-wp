@@ -71,26 +71,28 @@ Template Name: About Us Page
                             <?php the_field( 'popular_programs_list_all_title' ); ?>
                         </div>
                         <?php
-                        $this_category = get_category($cat='14');
-                        $parent_term_id =$this_category->cat_ID;
+							$args = array(
+								'post_type' => 'post',
+                                'posts_per_page' => 4,
+								'category_in' => array( 14 ),
+							);
 
-                        $taxonomies = array( 
-                        'taxonomy' => 'category'
-                        );
+							$programs = new WP_Query( $args );
 
-                        $args = array(
-                        'child_of' => $parent_term_id
-                        ); 
+							if( $programs->have_posts() ):
+								while( $programs->have_posts() ): $programs->the_post();	
+							?>
+                            <div class="about-us-page__popular-programs-bottom-list-programs-name">
+                                <a href="<?php the_permalink(); ?>">
+							        <?php the_title(); ?>
+                                </a>
+                            </div>
 
-                        $terms = get_terms($taxonomies, $args);
-                        if (sizeof($terms)>0) {
-                            foreach ( $terms as $term ) {
-                            echo '<div class="about-us-page__popular-programs-bottom-list-programs-name">';
-                            echo '<a href="' . esc_url( get_category_link( $term->term_id ) ) . '">'.$term->name;
-                            echo '</div>';
-                            }
-                        }
-                        ?> 
+							<?php
+							    endwhile;
+									wp_reset_postdata();
+							endif;
+						?>
                     </div>
                 </div>
                 <div class="about-us-page__popular-programs-bottom-column">

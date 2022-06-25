@@ -8,9 +8,16 @@
             <?php the_field('program_text'); ?>
         </div>
         <div class="popular-programs__btn">
-            <a class="popular-programs__btn-link link-border-bottom" href="<?php the_field('program_btn_link'); ?>">
-                <?php the_field('program_btn_text'); ?>
-            </a>
+            <?php
+                $link = get_field( 'program_btn' );
+                if ( $link ):
+                    $link_url = $link['url'];
+                    $link_title = $link['title'];
+                ?>
+                <a class="link-border-bottom" href="<?php echo esc_url( $link_url ); ?>">
+                    <?php echo esc_html( $link_title ); ?>
+                </a>
+                <?php endif; ?>
         </div>
         <div class="popular-programs__row">
             <div class="popular-programs__column popular-programs--bg-green wow animate__fadeInLeft" data-wow-delay=".5s">

@@ -17,9 +17,16 @@ Template Name: Home
                     </div>
                 </div>
                 <div class="banner__column-left-btn">
-                    <a class="banner__column-left-btn-link link-border-bottom" href="<?php the_field( 'banner_link' ); ?>">
-                        <?php the_field( 'banner_btn' ); ?>
-                    </a>
+                    <?php
+                        $link = get_field( 'banner_btn' );
+                        if ( $link ):
+                            $link_url = $link['url'];
+                            $link_title = $link['title'];
+                        ?>
+                        <a class="banner__column-left-btn-link link-border-bottom" href="<?php echo esc_url( $link_url ); ?>">
+                            <?php echo esc_html( $link_title ); ?>
+                        </a>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>

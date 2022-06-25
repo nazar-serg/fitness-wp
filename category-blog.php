@@ -25,6 +25,7 @@ Template Name: Blog
                 <aside class="content-area__sidebar">
                 <?php
                 $this_category = get_category($cat='3');
+
                 $parent_term_id =$this_category->cat_ID;
 
                 $taxonomies = array( 
@@ -37,17 +38,25 @@ Template Name: Blog
 
                 $terms = get_terms($taxonomies, $args);
                     echo '<div class="content-area__widget-wrapper">';
+                    echo '<h3>Категорії</h3>';
                     echo '<ul>';
                     if (sizeof($terms)>0) {
                         foreach ( $terms as $term ) {
-                            echo '<li>';
-                            echo '<a href="' . esc_url( get_category_link( $term->term_id ) ) . '">'.$term->name;
-                            echo '</li>';
-                            }
+                            echo '<li><a href="' . esc_url( get_category_link( $term->term_id ) ) . '">' . $term->name . '</a></li>';
+                        }
                         }
                     echo '</ul>';
                     echo '</div>';
-                ?> 
+                ?>
+                
+                <?php 
+
+                echo '<div class="content-area__widget-wrapper">';
+                echo '<h3>Позначка</h3>';
+                the_tags( '<ul><li>','</li><li>','</li></ul>' ); 
+                echo '</div>';
+                
+                ?>
                 </aside>
             </div>
             <div class="content-area__column-right">
@@ -56,10 +65,9 @@ Template Name: Blog
                 </div>
                 <div class="content-area__column-right-row">
                     <?php 
-                    $query = new WP_Query( 'cat=3' );
-                    if( $query->have_posts() ):
+                    if( have_posts() ):
 
-                        while( $query->have_posts() ): $query->the_post();
+                        while( have_posts() ): the_post();
 
                             get_template_part( 'parts/content', 'all-articles' );
 
